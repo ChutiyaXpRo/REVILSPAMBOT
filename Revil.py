@@ -456,21 +456,21 @@ async def spam(e):
                         await smex.reply(message)
                     else:
                         await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(0.0)
         elif e.reply_to_msg_id and smex.media:  
             counter = int(revilbot[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
                     smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
                     await gifspam(e, smex) 
-                await asyncio.sleep(0.3)  
+                await asyncio.sleep(0.0)  
         elif e.reply_to_msg_id and smex.text:
             message = smex.text
             counter = int(revilbot[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     await e.client.send_message(e.chat_id, message)
-                    await asyncio.sleep(0.3)
+                    await asyncio.sleep(0.0)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
 
@@ -512,7 +512,7 @@ async def spam(e):
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
                         await e.client.send_message(e.chat_id, caption)
-                        await asyncio.sleep(0.3)
+                        await asyncio.sleep(0.0)
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
@@ -532,7 +532,7 @@ async def spam(e):
                     caption = f"{username} {reply}"
                     async with e.client.action(e.chat_id, "typing"):
                         await e.client.send_message(e.chat_id, caption)
-                        await asyncio.sleep(0.3)
+                        await asyncio.sleep(0.0)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
 
@@ -691,12 +691,12 @@ async def ping(e):
         event = await e.reply(text, parse_mode=None, link_preview=None )
         end = datetime.now()
         ms = (end-start).microseconds / 1000
-        await event.edit(f"▒█▀▀█ ▒█▀▀▀█ ▀▀█▀▀\n▒█▀▀▄ ▒█░░▒█ ░▒█░░\n▒█▄▄█ ▒█▄▄▄█ ░▒█░░\n\n𝗥𝐄V𝐈𝗟 Sᴘᴀᴍ BᴏT ʜᴇʀᴇ `{ms}` 𝗠𝗦")
+        await event.edit(f"▒█▀▀█ ▒█▀▀▀█ ▀▀█▀▀\n▒█▀▀▄ ▒█░░▒█ ░▒█░░\n▒█▄▄█ ▒█▄▄▄█ ░▒█░░\n\n⚡LUND SPAM BOT 🤤💦`{ms}` 𝗠𝗦")
     
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))⚡
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @hdk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @sdk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
