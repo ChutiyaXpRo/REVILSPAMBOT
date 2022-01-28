@@ -696,7 +696,7 @@ async def ping(e):
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))⚡
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @hdk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 @sdk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
